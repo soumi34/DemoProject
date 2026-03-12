@@ -1,0 +1,50 @@
+package testScript;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+
+import utilities.ScreenshotUtility;
+
+public class Base {
+	
+WebDriver driver;
+	
+	@BeforeMethod(alwaysRun = true)
+	@Parameters("browser")
+	public void browser_Intialization(String browser) throws Exception
+	{
+		if(browser.equalsIgnoreCase("edge"))
+		{
+			driver = new EdgeDriver();
+		}
+		else if(browser.equalsIgnoreCase("chrome"))
+		{
+			driver = new ChromeDriver();
+		}
+		
+		else
+		{
+			throw new Exception("Invalid Browser");
+		}
+		driver.get("https://groceryapp.uniqassosiates.com/admin");
+		driver.manage().window().maximize();	
+	}
+	
+	//@AfterMethod(alwaysRun = true)
+	
+	public void browserQuitAndClose(ITestResult iTestResult) throws IOException {
+		if(iTestResult.getStatus()==iTestResult.FAILURE) {
+			ScreenshotUtility screenshot=new ScreenshotUtility();
+			screenshot.getScreenshot(driver, iTestResult.getName());
+		}
+		
+		driver.quit();
+	}
+}
