@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-11T22:32:55 IST" name="Suite" finished-at="2026-03-11T22:33:17 IST" duration-ms="22140">
+  <suite started-at="2026-03-16T19:42:56 IST" name="Suite" finished-at="2026-03-16T19:43:42 IST" duration-ms="46241">
     <groups>
       <group name="Regression">
         <method signature="LoginTest.verifiedUserIsAbleToLoginWithValidCredential()[pri:1, instance:testScript.LoginTest@4c583ecf]" name="verifiedUserIsAbleToLoginWithValidCredential" class="testScript.LoginTest"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2026-03-11T22:32:55 IST" name="Test" finished-at="2026-03-11T22:33:17 IST" duration-ms="22140">
+    <test started-at="2026-03-16T19:42:56 IST" name="Test" finished-at="2026-03-16T19:43:42 IST" duration-ms="46241">
       <class name="testScript.LoginTest">
-        <test-method is-config="true" signature="browser_Intialization(java.lang.String)[pri:0, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-11T22:32:55 IST" name="browser_Intialization" finished-at="2026-03-11T22:33:02 IST" duration-ms="7124" status="PASS">
+        <test-method is-config="true" signature="browser_Intialization(java.lang.String)[pri:0, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-16T19:42:56 IST" name="browser_Intialization" finished-at="2026-03-16T19:43:12 IST" duration-ms="15261" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,11 +21,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser_Intialization -->
-        <test-method signature="verifiedUserIsAbleToLoginWithValidCredential()[pri:1, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-11T22:33:02 IST" name="verifiedUserIsAbleToLoginWithValidCredential" finished-at="2026-03-11T22:33:05 IST" duration-ms="3253" status="PASS">
+        <test-method signature="verifiedUserIsAbleToLoginWithValidCredential()[pri:1, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-16T19:43:12 IST" name="verifiedUserIsAbleToLoginWithValidCredential" finished-at="2026-03-16T19:43:18 IST" duration-ms="6759" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifiedUserIsAbleToLoginWithValidCredential -->
-        <test-method is-config="true" signature="browser_Intialization(java.lang.String)[pri:0, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-11T22:33:05 IST" name="browser_Intialization" finished-at="2026-03-11T22:33:08 IST" duration-ms="2817" status="PASS">
+        <test-method is-config="true" signature="browser_Intialization(java.lang.String)[pri:0, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-16T19:43:18 IST" name="browser_Intialization" finished-at="2026-03-16T19:43:24 IST" duration-ms="5534" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -36,11 +36,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser_Intialization -->
-        <test-method signature="verifiedUserIsNotAbleToLoginWithInvalidUsername()[pri:2, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-11T22:33:08 IST" name="verifiedUserIsNotAbleToLoginWithInvalidUsername" finished-at="2026-03-11T22:33:09 IST" duration-ms="1161" status="PASS">
+        <test-method signature="verifiedUserIsNotAbleToLoginWithInvalidUsername()[pri:2, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-16T19:43:24 IST" name="verifiedUserIsNotAbleToLoginWithInvalidUsername" finished-at="2026-03-16T19:43:26 IST" duration-ms="2174" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifiedUserIsNotAbleToLoginWithInvalidUsername -->
-        <test-method is-config="true" signature="browser_Intialization(java.lang.String)[pri:0, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-11T22:33:09 IST" name="browser_Intialization" finished-at="2026-03-11T22:33:12 IST" duration-ms="3163" status="PASS">
+        <test-method is-config="true" signature="browser_Intialization(java.lang.String)[pri:0, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-16T19:43:26 IST" name="browser_Intialization" finished-at="2026-03-16T19:43:32 IST" duration-ms="5747" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,11 +51,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser_Intialization -->
-        <test-method signature="verifiedUserIsNotAbleToLoginWithInvalidPassword()[pri:3, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-11T22:33:12 IST" name="verifiedUserIsNotAbleToLoginWithInvalidPassword" finished-at="2026-03-11T22:33:14 IST" duration-ms="1275" status="PASS">
+        <test-method signature="verifiedUserIsNotAbleToLoginWithInvalidPassword()[pri:3, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-16T19:43:32 IST" name="verifiedUserIsNotAbleToLoginWithInvalidPassword" finished-at="2026-03-16T19:43:34 IST" duration-ms="2291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifiedUserIsNotAbleToLoginWithInvalidPassword -->
-        <test-method is-config="true" signature="browser_Intialization(java.lang.String)[pri:0, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-11T22:33:14 IST" name="browser_Intialization" finished-at="2026-03-11T22:33:16 IST" duration-ms="2192" status="PASS">
+        <test-method is-config="true" signature="browser_Intialization(java.lang.String)[pri:0, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-16T19:43:34 IST" name="browser_Intialization" finished-at="2026-03-16T19:43:39 IST" duration-ms="5251" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -66,7 +66,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browser_Intialization -->
-        <test-method signature="verifiedUserIsNotAbleToLoginWithInvalidUsername_Password()[pri:4, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-11T22:33:16 IST" name="verifiedUserIsNotAbleToLoginWithInvalidUsername_Password" finished-at="2026-03-11T22:33:17 IST" duration-ms="1030" status="PASS">
+        <test-method signature="verifiedUserIsNotAbleToLoginWithInvalidUsername_Password()[pri:4, instance:testScript.LoginTest@4c583ecf]" started-at="2026-03-16T19:43:39 IST" name="verifiedUserIsNotAbleToLoginWithInvalidUsername_Password" finished-at="2026-03-16T19:43:42 IST" duration-ms="2892" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifiedUserIsNotAbleToLoginWithInvalidUsername_Password -->
