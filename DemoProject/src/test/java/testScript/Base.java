@@ -10,11 +10,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.ScreenshotUtility;
 
 public class Base {
 	
 WebDriver driver;
+
 	
 	@BeforeMethod(alwaysRun = true)
 	@Parameters("browser")
@@ -22,6 +24,7 @@ WebDriver driver;
 	{
 		if(browser.equalsIgnoreCase("edge"))
 		{
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
 		else if(browser.equalsIgnoreCase("chrome"))
