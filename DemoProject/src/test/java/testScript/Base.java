@@ -1,53 +1,70 @@
 package testScript;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
+import constant.Constant;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.ScreenshotUtility;
+import utilities.WaitUtility;
 
 public class Base {
 	
-WebDriver driver;
-
+	public Properties properties;
+	public FileInputStream fileInputStream;
+	
+	public WebDriver driver;
+	/*public static ThreadLocal<WebDriver>driver=new ThreadLocal<>() ;
+	public WebDriver getDriver() {
+		return driver.get();
+	}*/
 	
 	@BeforeMethod(alwaysRun = true)
 	@Parameters("browser")
-	public void browser_Intialization(String browser) throws Exception
-	{
-		if(browser.equalsIgnoreCase("edge"))
-		{
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
+	public void browser_launch(String browser) throws Exception {
+		try {
+			properties=new Properties();
+			fileInputStream=new FileInputStream(Constant.CONFIGFILE);
+			properties.load(fileInputStream);
 		}
-		else if(browser.equalsIgnoreCase("chrome"))
-		{
+		catch(Exception e){
+		System.out.println(e);
+		}
+		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
-		}
-		
-		else
-		{
+		} else if (browser.equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
+		} else if (browser.equalsIgnoreCase("edge")) {
+			driver = new EdgeDriver();
+		} else {
 			throw new Exception("Invalid Browser");
 		}
-		driver.get("https://groceryapp.uniqassosiates.com/admin");
-		driver.manage().window().maximize();	
+		//driver.get("https://groceryapp.uniqassosiates.com/admin");
+		driver.get(properties.getProperty("url"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICITWAIT));
+		driver.manage().window().maximize();
 	}
-	
-	//@AfterMethod(alwaysRun = true)
-	
+
+	// Why getScreenshot call in after method:because last run is after method,if
+	// any one fails we get screenshot
+	@AfterMethod(alwaysRun = true)
 	public void browserQuitAndClose(ITestResult iTestResult) throws IOException {
-		if(iTestResult.getStatus()==iTestResult.FAILURE) {
-			ScreenshotUtility screenshot=new ScreenshotUtility();
-			screenshot.getScreenshot(driver, iTestResult.getName());
+		if (iTestResult.getStatus() == iTestResult.FAILURE) {
+			ScreenshotUtility screenshot = new ScreenshotUtility();
+			screenshot.getScreenshot(driver, iTestResult.getName());// iTestResult-interface,name of failed testcase
 		}
-		
+
 		driver.quit();
-	}
+}
 }

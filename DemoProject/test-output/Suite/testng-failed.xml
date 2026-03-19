@@ -2,13 +2,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="edge"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
       <class name="testScript.LoginTest">
         <methods>
+          <include name="verifiedUserIsNotAbleToLoginWithInvalidPassword"/>
           <include name="verifiedUserIsNotAbleToLoginWithInvalidUsername"/>
+          <include name="browserQuitAndClose"/>
           <include name="verifiedUserIsAbleToLoginWithValidCredential"/>
-          <include name="browser_Intialization"/>
+          <include name="browser_launch"/>
+          <include name="verifiedUserIsNotAbleToLoginWithInvalidUsername_Password"/>
         </methods>
       </class> <!-- testScript.LoginTest -->
     </classes>
