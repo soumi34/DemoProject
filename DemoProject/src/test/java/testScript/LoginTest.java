@@ -5,10 +5,12 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends Base {
+	public HomePage homepage;
 
 	// Assertion is used to validate the actual result and expected behaviour is
 	// verifying ,if it match -pass ,not match -fail
@@ -28,9 +30,9 @@ public class LoginTest extends Base {
 		String username = ExcelUtility.getStringData(1, 0, "loginpage");
 		String password = ExcelUtility.getStringData(1, 1, "loginpage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterTheUsername(username);
-		loginpage.enterThePassword(password);
-		loginpage.clickOnSignInButton();
+		loginpage.enterTheUsername(username).enterThePassword(password);//chaining method calling
+		//loginpage.enterThePassword(password);
+		homepage=loginpage.clickOnSignInButton();
 		boolean homepage = loginpage.isDashboardDisplayed();
 		Assert.assertTrue(homepage);
 	}

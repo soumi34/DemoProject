@@ -179,6 +179,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;generateReport.Listerners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
     &lt;classes&gt;
@@ -241,24 +244,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifiedUserIsAbleToLoginWithValidCredential')
 data.setCell(0, 2, 'testScript.LoginTest')
-data.setCell(0, 3, 5115);
+data.setCell(0, 3, 2881);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifiedUserIsNotAbleToLoginWithInvalidUsername')
 data.setCell(1, 2, 'testScript.LoginTest')
-data.setCell(1, 3, 2221);
+data.setCell(1, 3, 1153);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifiedUserIsNotAbleToLoginWithInvalidPassword')
+data.setCell(2, 1, 'verifiedUserIsNotAbleToLoginWithInvalidUsername_Password')
 data.setCell(2, 2, 'testScript.LoginTest')
-data.setCell(2, 3, 2025);
+data.setCell(2, 3, 1076);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifiedUserIsNotAbleToLoginWithInvalidUsername_Password')
+data.setCell(3, 1, 'verifiedUserIsNotAbleToLoginWithInvalidPassword')
 data.setCell(3, 2, 'testScript.LoginTest')
-data.setCell(3, 3, 1819);
+data.setCell(3, 3, 1034);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -291,47 +294,47 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifiedUserIsAbleToLoginWithValidCredential</span>
-                <span class="method-start">10096 ms</span>
+                <span class="method-start">5115 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifiedUserIsAbleToLoginWithValidCredential status=SUCCESS method=LoginTest.verifi...)</span>
-                <span class="method-start">15223 ms</span>
+                <span class="method-start">8008 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">browser_launch(edge)</span>
-                <span class="method-start">16025 ms</span>
+                <span class="method-start">8384 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifiedUserIsNotAbleToLoginWithInvalidUsername</span>
-                <span class="method-start">24671 ms</span>
+                <span class="method-start">11212 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifiedUserIsNotAbleToLoginWithInvalidUsername status=SUCCESS method=LoginTest.ver...)</span>
-                <span class="method-start">26897 ms</span>
+                <span class="method-start">12367 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">browser_launch(edge)</span>
-                <span class="method-start">27774 ms</span>
+                <span class="method-start">12684 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifiedUserIsNotAbleToLoginWithInvalidPassword</span>
-                <span class="method-start">34616 ms</span>
+                <span class="method-start">15005 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifiedUserIsNotAbleToLoginWithInvalidPassword status=SUCCESS method=LoginTest.ver...)</span>
-                <span class="method-start">36648 ms</span>
+                <span class="method-start">16039 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">browser_launch(edge)</span>
-                <span class="method-start">37844 ms</span>
+                <span class="method-start">16374 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifiedUserIsNotAbleToLoginWithInvalidUsername_Password</span>
-                <span class="method-start">44366 ms</span>
+                <span class="method-start">18706 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuitAndClose([TestResult name=verifiedUserIsNotAbleToLoginWithInvalidUsername_Password status=SUCCESS method=Logi...)</span>
-                <span class="method-start">46190 ms</span>
+                <span class="method-start">19782 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -8,8 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 public class ManageNewsPage {
 
 	public WebDriver driver;
-	@FindBy(xpath = "//div[@class='small-box bg-info']//following::p[text()='Manage News']//following::a[text()='More info '][1]")
-	WebElement moreinfo;
+	// @FindBy(xpath = "//div[@class='small-box
+	// bg-info']//following::p[text()='Manage News']//following::a[text()='More info
+	// '][1]")
+	// WebElement managenewsmoreinfo;
 	@FindBy(xpath = "//a[text()=' New']")
 	WebElement newbutton;
 	@FindBy(xpath = "//textarea[@placeholder='Enter the news']")
@@ -25,21 +27,23 @@ public class ManageNewsPage {
 												// class driver
 	}
 
-	public void clickOnMoreInfoButton() {
-		moreinfo.click();
-	}
+//	public void clickOnManageNewsMoreInfoButton() {
+//		managenewsmoreinfo.click();
+//	}
 
-	public void clickOnNewButton() {
+	public ManageNewsPage clickOnNewButton() {
 		newbutton.click();
+		return this;
 	}
 
-	public void enterTheNews(String news) {
+	public ManageNewsPage enterTheNews(String news) {
 		enternews.sendKeys(news);
-		;
+		return this;
 	}
 
-	public void clickOnSaveButton() {
+	public ManageNewsPage clickOnSaveButton() {
 		savebutton.click();
+		return this;
 	}
 
 	public boolean isSuccessMessageDisplayed() {
